@@ -1,0 +1,10 @@
+# Кеш Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Виртуальное окружение
+myenv/
+env/
+.log
+.env
