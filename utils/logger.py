@@ -1,11 +1,15 @@
 import logging
 
-logger = logging.getLogger(__name__) #Тут задается имя логера в зависимости от файла ок да?
-logger.setLevel(logging.INFO) #Тут крч инфа о предупреждениях, ошибках 
+logger = logging.getLogger("logs_bot")
+logger.setLevel(logging.INFO)
 
-file_write=logging.FileHandler("logs.log")
-file_write.setLevel(logging.INFO)
+formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
 
-Format = logging.Formatter("%(levelname)s - %(message)s")
-Format.setFormatter(Format)
-logger.addHandler(file_write) #Все что получилось - пишется в файл (вроде)
+
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter) 
+logger.addHandler(console_handler)
+
+file_handler = logging.FileHandler("bot_logs.log", encoding="utf-8")
+file_handler.setFormatter(formatter)
+logger.addHandler(file_handler)
