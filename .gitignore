@@ -6,5 +6,5 @@ __pycache__/
 # Виртуальное окружение
 myenv/
 env/
-.log
+*.log
 .env

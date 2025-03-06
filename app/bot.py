@@ -7,10 +7,10 @@ from handlers import start_handler, echo_handler
 from aiogram import Dispatcher, Bot, types
 from aiogram.types import Message
 from aiogram.filters import Command
-import sys
-import os
+# import sys
+# import os
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from utils.logger import logger
 # from aiogram.utils import executor
